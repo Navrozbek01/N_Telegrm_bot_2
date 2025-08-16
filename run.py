@@ -112,9 +112,11 @@ async def start_handler(message: Message):
         "/Dov_dov_qush\n"
         "/Burama_shoxli_kiyik\n"
         "/Qizil_tulki\n"
-        "/Dovon_mushugi"
+        "/Dovon_mushugi\n"
+        "/Yilqiboqar"  
     )
     await message.answer(text)
+
 
 @dp.message(Command('Sher'))
 async def handle_message(message: Message):
@@ -512,6 +514,10 @@ async def handle_message(message: Message):
 async def handle_message(message: Message):
     await message.answer("Dovon mushugi — kichik yirtqich mushuk bo‘lib, O‘rta Osiyo va boshqa tog‘li hududlarda yashaydi. Ularning vazni 2–6 kg, uzunligi 50–80 sm atrofida. Dovon mushuklari yolg‘iz yashaydi va kichik sutemizuvchilar, qushlar va hasharotlar bilan oziqlanadi. Ularning junlari qalin bo‘lib, sovuq muhitga moslashgan. Dovon mushuklari kechasi faol va juda yashirin harakat qiladi.")
 
+@dp.message(Command('Yilqiboqar'))
+async def handle_message(message: Message):
+    await message.answer("Yilqiboqar – bu hayvon nomi sifatida ko‘pchilikka notanish bo‘lishi mumkin, chunki u xalq og‘zaki ijodida yoki eski adabiy matnlarda uchrashi mumkin. Keling, so‘zni tahlil qilib tushunishga harakat qilaylik:")
+
 @dp.message()
 async def hamma_message(message: Message):
     await message.reply("Iltimos Mavjut bolgan Hayvon nomini / dan keyin kiriting !")
@@ -520,4 +526,5 @@ async def main():
     await dp.start_polling(bot)
 
 if __name__ == "__main__":
+
     asyncio.run(main())
